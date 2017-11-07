@@ -25,7 +25,7 @@
 			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!--optional -->
 			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!--optional-->
         </config-file>
-        <framework src="com.google.android.gms:play-services-ads:10+" />
+        <!--<framework src="com.google.android.gms:play-services-ads:10+" />-->
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
 			<activity android:name="com.appodeal.ads.InterstitialActivity"
 				android:configChanges="orientation|screenSize"
@@ -52,9 +52,9 @@
 				android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
 				android:theme="@android:style/Theme.Translucent" />
 
-			<activity android:name="com.chartboost.sdk.CBImpressionActivity" android:excludeFromRecents="true"
+			<!--<activity android:name="com.chartboost.sdk.CBImpressionActivity" android:excludeFromRecents="true"
 				android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-				android:configChanges="keyboardHidden|orientation|screenSize" />
+				android:configChanges="keyboardHidden|orientation|screenSize" />-->
 
 			<activity android:name="com.applovin.adview.AppLovinInterstitialActivity" android:configChanges="orientation|screenSize"/>
 			<activity android:name="com.applovin.adview.AppLovinConfirmationActivity" android:configChanges="orientation|screenSize"/>
@@ -89,22 +89,17 @@
 			<!--suppress AndroidDomInspection -->
 			<activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
 
-			<!--suppress AndroidDomInspection -->
+			<!--suppress AndroidDomInspection
 			<activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity"
 				android:theme="@android:style/Theme" />
-			<!--suppress AndroidDomInspection -->
 			<activity android:name="com.startapp.android.publish.adsCommon.activities.OverlayActivity"
 				android:theme="@android:style/Theme.Translucent"
 				android:configChanges="orientation|keyboardHidden|screenSize" />
-			<!--suppress AndroidDomInspection -->
 			<activity android:name="com.startapp.android.publish.adsCommon.activities.FullScreenActivity"
 				android:theme="@android:style/Theme"
 				android:configChanges="orientation|keyboardHidden|screenSize" />
-			<!--suppress AndroidDomInspection -->
 			<service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
-			<!--suppress AndroidDomInspection -->
-			<service android:name="com.startapp.android.publish.common.metaData.InfoEventService" />
-
+			<service android:name="com.startapp.android.publish.common.metaData.InfoEventService" /> -->
 
 			<service android:name="com.yandex.metrica.MetricaService" android:enabled="true"
 				android:exported="true" android:process=":Metrica">
@@ -219,22 +214,22 @@
 				</intent-filter>
 			</receiver>
         </config-file>
-        <framework src="com.google.android.gms:play-services-ads:10+" />
+        <!--<framework src="com.google.android.gms:play-services-ads:10+" />
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
         
-        </config-file>
+        </config-file>-->
         <source-file src="src/android/AppodealPlugin.java" target-dir="src/com/appodeal/plugin" />
-    	<framework src="src/android/dependency_fix.gradle" custom="true" type="gradleReference" />
+      <!--<framework src="src/android/dependency_fix.gradle" custom="true" type="gradleReference" />-->
         <source-file src="libs/Android/appodeal-2.1.4.jar" target-dir="libs" />
         <source-file src="libs/Android/appodeal-banner-view-2.3.0.jar" target-dir="libs" />
         <source-file src="libs/Android/applovin-7.3.2.jar" target-dir="libs" />
-        <source-file src="libs/Android/chartboost-6.6.3.jar" target-dir="libs" />
+        <!--<source-file src="libs/Android/chartboost-6.6.3.jar" target-dir="libs" />-->
         <source-file src="libs/Android/inmobi-6.2.3.jar" target-dir="libs" />
         <source-file src="libs/Android/picasso-2.5.2.jar" target-dir="libs" />
         <source-file src="libs/Android/mailru-4.6.17.jar" target-dir="libs" />
         <source-file src="libs/Android/unity_ads-2.1.0.jar" target-dir="libs" />
         <source-file src="libs/Android/yandex-metrica-2.73.jar" target-dir="libs" />
-    	<source-file src="libs/Android/startapp-3.6.2.jar" target-dir="libs" />
+        <!--<source-file src="libs/Android/startapp-3.6.2.jar" target-dir="libs" />-->
         <framework src="libs/Android/adcolony" custom="true" />
     </platform>
 
@@ -319,7 +314,7 @@
         <source-file src="libs/iOS/Adapters/APDGoogleAdMobAdapter.embeddedframework/libAPDGoogleAdMobAdapter.a" framework="true"/>
         <!-- Flurry -->
         <framework custom="true" src="libs/iOS/Adapters/APDFlurryAdapter.embeddedframework/Flurry.framework"/>
-	<framework custom="true" src="libs/iOS/Adapters/APDFlurryAdapter.embeddedframework/FlurryAds.framework"/>
+        <framework custom="true" src="libs/iOS/Adapters/APDFlurryAdapter.embeddedframework/FlurryAds.framework"/>
         <source-file src="libs/iOS/Adapters/APDFlurryAdapter.embeddedframework/libAPDFlurryAdapter.a" framework="true"/>
         <!-- InMobi -->
         <framework custom="true" src="libs/iOS/Adapters/APDInMobiAdapter.embeddedframework/InMobiSDK.framework"/>
@@ -362,7 +357,7 @@
         <resource-file src="libs/iOS/Adapters/APDTwitterMoPubAdapter.embeddedframework/Resources/MPUnmutedBtn@2x.png"/>
         <resource-file src="libs/iOS/Adapters/APDTwitterMoPubAdapter.embeddedframework/Resources/MPUnmutedBtn@3x.png"/>
         <resource-file src="libs/iOS/Adapters/APDTwitterMoPubAdapter.embeddedframework/Resources/MRAID.bundle"/>
-	<resource-file src="libs/iOS/Adapters/APDTwitterMoPubAdapter.embeddedframework/Resources/MPAdBrowserController.xib"/>
+        <resource-file src="libs/iOS/Adapters/APDTwitterMoPubAdapter.embeddedframework/Resources/MPAdBrowserController.xib"/>
         <!-- UnityAds -->
         <framework custom="true" src="libs/iOS/Adapters/APDUnityAdapter.embeddedframework/UnityAds.framework"/>
         <source-file src="libs/iOS/Adapters/APDUnityAdapter.embeddedframework/libAPDUnityAdapter.a" framework="true"/>
