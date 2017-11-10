@@ -26,7 +26,7 @@
 			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!--optional-->
         </config-file>
         <!--<framework src="com.google.android.gms:play-services-ads:10.+" />-->
-	<framework src="com.google.gms:google-services:10.2.0" />
+	<framework src="com.google.gms:google-services:9.0.0" />
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
 			<activity android:name="com.appodeal.ads.InterstitialActivity"
 				android:configChanges="orientation|screenSize"
